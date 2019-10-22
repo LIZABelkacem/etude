@@ -1,5 +1,5 @@
 #include "appli.h"
-#include "etud.h"
+#include "include/etud.h"
 #include <stdlib.h>
 
 
@@ -24,8 +24,9 @@ void print_menu ()
         printf (" 1) Afficher la liste      \n");
         printf (" 2) Ajouter un etudiant    \n");
         printf (" 3) Supprimer un etudiant  \n");
-        printf (" 4) Rechercher un etudiant \n");
-        printf (" 5) Afficher la moyenne    \n");
+        printf (" 4) Rechercher un etudiant par num\n");
+        printf (" 5) Rechercher un etudiant par nom* \n");
+        printf (" 6) Afficher la moyenne    \n");
         printf (" 0) Quitter    \n");
 
         choix = lire_choix();
@@ -70,6 +71,12 @@ void print_menu ()
                 break;
 
             case 5:
+                printf("Numéro de l'étudiant : ");
+                fscanf(stdin, "%s", nom);
+                find_etud_by_name(nom);
+                break;
+
+            case 6:
                 printf("moyenne : %.2f\n", average());
                 break;
         }
