@@ -21,8 +21,11 @@ int main (int argc, char* argv[]){
 
     load(fileName);
     
-    //print_menu();
-    print_list();
+    print_menu();
+
+    save(fileName);
+
+    /*print_list();
 
     add_etud("BALIT", "Habib", 17, -1);
 	add_etud("LIZA", "BEL", 18, -1);
@@ -40,9 +43,8 @@ int main (int argc, char* argv[]){
     setNote(3, 9);
     print_list();
 
-    save();
 
-    find_etud_by_name("rahim");
+    find_etud_by_name("rahim");*/
     
     return 0; 
 }
