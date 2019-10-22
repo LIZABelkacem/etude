@@ -35,7 +35,15 @@ int add_etud(char* nom, char* prenom, float note);
 int lire_choix();
 
 
+
 /**
  *
  */
 int delete_etud(int num);
+
+
+/**
+ *
+ */
+
+float average();
