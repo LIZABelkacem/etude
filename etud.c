@@ -2,6 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+/**
+
+*\brief ajouter un étudiant 
+*\param : char*
+*\param : char*
+*\param : float 
+*\return : int  0 si la liste est vide  1 sinon 
+
+*/
 int add_etud(char* nom, char* prenom, float note){
 	Etud* newEtud = malloc(sizeof *newEtud);
 	strcpy(newEtud->nom, nom);
@@ -13,6 +23,9 @@ int add_etud(char* nom, char* prenom, float note){
   return 0;
 }
 
+/**
+*\brief afficher la liste des étudiants 
+*/
 
 void print_list(){
   printf(" Liste des etudiants \n ");
@@ -24,7 +37,12 @@ void print_list(){
   	etud = etud->next;
   }
 }
+/**
+*\brief supprimer un étudiant 
+*\param: int
+*\ return : int  -1 si la liste est vide , 1 s'il n'a pas trouvé l'élément saisi  , 0 sinon   et au même temps elle supprime l'élément 
 
+*/ 
 int delete_etud(int num){
 	Etud *currentEtud, *lastEtud;
 
@@ -46,6 +64,13 @@ int delete_etud(int num){
 	free(currentEtud);
 	return 0;
 }
+
+/**
+*\brief recherhcer un étudiant 
+*\param: int
+*\ return : Etud* les informations relatives au numéro de l'étudiant tappé par l'utilisateur 
+
+*/ 
 
 Etud* find_etud(int num){
 	Etud *currentEtud, *lastEtud;
