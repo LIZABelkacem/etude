@@ -15,7 +15,7 @@ typedef struct etud
  */
 
 extern Etud* pEtud;
-
+int id;
 
 /**
  *
@@ -26,10 +26,16 @@ void print_list();
 /**
  *
  */
-int add_etud(char* nom, char* prenom, int note);
+int add_etud(char* nom, char* prenom, float note);
 
 
 /**
  *
  */
 int lire_choix();
+
+
+/**
+ *
+ */
+int delete_etud(int num);
