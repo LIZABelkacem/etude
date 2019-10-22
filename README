@@ -1,0 +1,38 @@
+
+Informations générale
+
+    Titre: Gestionnaire d'étudiants
+    Résumé: Cette application, développé en C, sert à mettre en pratique les différents outils abordés dans le cours Gestion et Conduite de projet informatique.
+
+Démarrage
+
+    Ces instructions vous permettrons de prendre connaissance des pré-requis et d’installer le projet afin de pouvoir développer et tester localement.
+
+Auteurs
+
+    Université: Paris 8 
+    Auteurs:
+        Manel
+        Liza
+        Habib 
+        Roch Delannay
+
+License
+
+    GNU LESSER GENERAL PUBLIC LICENSE, Version 3, 29 June 2007
+
+Guide et standardisation
+    Cette section informe sur les normes et conventions de développement adopté par l’équipe pour assurer une cohérence dans le code source.
+
+Exécution et écriture des tests
+    Contient les informations nécessaire pour rouler les tests automatisés et comment en écrire selon les styles : « e2e, unit, acceptance, etc. »
+Compilation
+    Inclus les commandes pour compiler le code avant le déploiement.
+Déploiement
+    Tout ce qu’il faut savoir sur la ou les méthodes de déploiement selon les environnements.
+Fonctionnalités
+    Simple liste des principales fonctionnalités. Pratique dans les projets « Open Source ».
+
+
+Crédits
+    Énumère les salutations à d’autres projets ayant servi de près ou de loin au projet en cours, les sources d’inspiration, etc. 
