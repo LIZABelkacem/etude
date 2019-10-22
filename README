@@ -31,8 +31,12 @@ Guide et standardisation
 
 Compilation
 
-    gcc main.c -c
-    gcc main.c appli.c etud.c -o main_etud
+    commandes bash:
+        gcc main.c -c
+        gcc main.c appli.c etud.c -o main_etud
+
+    makefile:
+        make
 
 Fonctionnalités
 
