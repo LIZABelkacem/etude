@@ -1,8 +1,17 @@
 #include "etud.h"
+
 #include <stdlib.h>
 #include <string.h>
+
 #define SIZE_MAX 1000
 
+/**
+ *\brief ajouter un étudiant 
+ *\param : char*
+ *\param : char*
+ *\param : float 
+ *\return : int  0 si la liste est vide  1 sinon 
+ */
 int add_etud(char* nom, char* prenom, float note, int num){
 	Etud* newEtud;
 
@@ -22,6 +31,9 @@ int add_etud(char* nom, char* prenom, float note, int num){
   	return 0;
 }
 
+/**
+*\brief afficher la liste des étudiants 
+*/
 void print_list(){
 	Etud* etud = pEtud->next;
 
@@ -35,6 +47,11 @@ void print_list(){
 	printf("-----------------\n");
 }
 
+/**
+*\brief supprimer un étudiant 
+*\param: int
+*\return : int  -1 si la liste est vide , 1 s'il n'a pas trouvé l'élément saisi  , 0 sinon   et au même temps elle supprime l'élément 
+*/
 int delete_etud(int num){
 	Etud *currentEtud, *lastEtud;
 
@@ -57,27 +74,33 @@ int delete_etud(int num){
 	return 1;
 }
 
+/**
+*\brief recherhcer un étudiant 
+*\param: int
+*\return : Etud* les informations relatives au numéro de l'étudiant tappé par l'utilisateur 
+*/ 
 Etud* find_etud(int num){
-	Etud *currentEtud, *lastEtud;
+	Etud *currentEtud;
 	
 	if(pEtud == NULL)
 		return NULL;
 
 	currentEtud = pEtud->next;
-	lastEtud = pEtud;
-
+	
 	while(currentEtud != NULL){
 		if(currentEtud->num == num){
 			return currentEtud;
 		}
-		lastEtud = currentEtud;
 		currentEtud = currentEtud->next;
 	}
 
 	return NULL;
 }
 
-
+/**
+ *\brief calculer la moyenne 
+  *\return:int 
+*/
 float average(){
 	Etud* etud = pEtud->next;
 	float average = 0.0;
@@ -96,7 +119,12 @@ float average(){
 }
 
 
-
+/**
+ *\brief modifier la note d'un étudiant
+ *\param: int
+ *\param: float
+ *\return:int 
+ */
 int setNote(int num, float note){
 	Etud* etud = find_etud(num);
 	
@@ -108,7 +136,9 @@ int setNote(int num, float note){
 	return 0;
 }
 
-
+/**
+ *\brief enregistrer les informations d'un étudiant
+ */
 void save(char* fileName){
 	FILE* fichier = NULL;
 	Etud* etud;
@@ -134,7 +164,10 @@ void save(char* fileName){
         printf("Impossible d'ouvrir le fichier test.txt");
     }
 }
-
+/**
+ *\brief chaarger la liste des étudiants lors du démmarage de l'application
+ *\param: char*
+*/
 void load(char* fileName){
 	FILE* fichier = NULL;
 	char line[SIZE_MAX], *token, *nom, *prenom;
@@ -170,8 +203,13 @@ void load(char* fileName){
 
 }
 
+/**
+ *\brief trouver un étudiant en saisissant son nom
+ *\param: char*
+ *\return:int 
+ */
 int find_etud_by_name(char* nom){
-	Etud *currentEtud, *lastEtud;
+	Etud *currentEtud;
 	int count = 0;
 	char* pch;
 

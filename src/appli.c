@@ -1,7 +1,11 @@
 #include "appli.h"
-#include "include/etud.h"
+#include "etud.h"
 #include <stdlib.h>
 
+/**
+ *\brief lire le choix saisi par l'utilisateur lors d l'affichage du menu principal de l'application
+*\return: int 
+*/
 
 int lire_choix ()
 {
@@ -9,10 +13,14 @@ int lire_choix ()
   do{
         printf("Saisir un choix : ");
         fscanf (stdin, "%d", &choix);
-  }while(choix < 0 || choix > 5);
+  }while(choix < 0 || choix > 6);
   
   return choix;
 }
+
+/**
+ *\brief affichager le menu principal de l'application
+*/
 
 void print_menu ()
 {
