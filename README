@@ -1,35 +1,17 @@
+#  Gestionnaire d'étudiants
+## Informations générale
 
-Informations générale
-
-    Titre: Gestionnaire d'étudiants
-
-    Résumé: Cette application, développé en C, sert à mettre en pratique les différents outils présentés dans le cours Gestion et Conduite de projet informatique.
-
-Démarrage
-
-    Ces instructions vous permettrons de prendre connaissance des pré-requis et d’installer le projet afin de pouvoir développer et tester localement.
-
-Auteurs
-
-    Université: Paris 8
-
-    Auteurs:
-        Manel Hadjoudj
-        Liza Belkacem
-        Habib Balit
-        Abdel Rahim Bouchiha
-        Roch Delannay
-
-License
-
-    GNU LESSER GENERAL PUBLIC LICENSE, Version 3, 29 June 2007
-
-Guide et standardisation
+    Cette application, développé en C, sert à mettre en pratique les différents outils présentés dans le cours Gestion et Conduite de projet informatique.
     
-    Cette section informe sur les normes et conventions de développement adopté par l’équipe pour assurer une cohérence dans le code source.
+## Fonctionnalités
+    Affichage de la liste des étudiants
+    Ajouter un étudiant
+    Rechercher un étudiant
+    Supprimer un étudiant
+    Afficher la moyenne d'un étudiant
+    
 
-
-Compilation
+## Compilation
 
     commandes bash:
         gcc -I./include/ -Wall src/main.c src/appli.c src/etud.c -o etud
@@ -37,13 +19,18 @@ Compilation
     makefile:
         make
         
-Execution
+## Execution
     ./etud
 
-Fonctionnalités
 
-    Affichage de la liste des étudiants
-    Ajouter un étudiant
-    Rechercher un étudiant
-    Supprimer un étudiant
-    Afficher la moyenne d'un étudiant
+## Auteurs
+ 
+        Manel Hadjoudj
+        Liza Belkacem
+        Habib Balit
+        Abdel Rahim Bouchiha
+        Roch Delannay
+        
+##License
+
+    GNU LESSER GENERAL PUBLIC LICENSE, Version 3, 29 June 2007
