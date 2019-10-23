@@ -3,7 +3,7 @@
 
 
 all :  main.o appli.o  etud.o  
-	gcc -o prog main.o appli.o etud.o
+	gcc -o  main.o appli.o etud.o
 
 main.o :
 	gcc -c -Wall main.c

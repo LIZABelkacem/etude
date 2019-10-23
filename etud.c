@@ -2,16 +2,19 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ *ydgd
+ *dhgc
+ */
 
 /**
+ *\brief ajouter un étudiant 
+ *\param : char*
+ *\param : char*
+ *\param : float 
+ *\return : int  0 si la liste est vide  1 sinon 
+ */
 
-*\brief ajouter un étudiant 
-*\param : char*
-*\param : char*
-*\param : float 
-*\return : int  0 si la liste est vide  1 sinon 
-
-*/
 int add_etud(char* nom, char* prenom, float note){
 	Etud* newEtud = malloc(sizeof *newEtud);
 	strcpy(newEtud->nom, nom);
@@ -42,7 +45,8 @@ void print_list(){
 *\param: int
 *\ return : int  -1 si la liste est vide , 1 s'il n'a pas trouvé l'élément saisi  , 0 sinon   et au même temps elle supprime l'élément 
 
-*/ 
+*/
+
 int delete_etud(int num){
 	Etud *currentEtud, *lastEtud;
 
@@ -91,3 +95,10 @@ Etud* find_etud(int num){
 
 	return lastEtud->next;
 }
+
+
+
+git status 
+git add si ajouter un fichier
+git commit -m "msg" pour commiter
+git push 
