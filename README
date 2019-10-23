@@ -32,11 +32,13 @@ Guide et standardisation
 Compilation
 
     commandes bash:
-        gcc main.c -c
-        gcc main.c appli.c etud.c -o main_etud
+        gcc -I./include/ -Wall src/main.c src/appli.c src/etud.c -o etud
 
     makefile:
         make
+        
+Execution
+    ./etud
 
 Fonctionnalités
 
