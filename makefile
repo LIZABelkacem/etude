@@ -4,7 +4,7 @@ CC = gcc
 RM = rm -f
 # déclaration des options du compilateur
 CFLAGS = -Wall
-CPPFLAGS = -I./include
+CPPFLAGS = -I src/include
 
 # définition des fichiers et dossiers
 PROGNAME = etud
